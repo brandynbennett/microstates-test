@@ -1,3 +1,6 @@
 <Parent as |data|>
   <Child @person={{data.person}} />
+
+  <div>First name: {{data.person.firstName.state}}</div>
+  <div>Last name: {{data.person.lastName.state}}</div>
 </Parent>
