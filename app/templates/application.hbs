@@ -1,2 +1,3 @@
-<Child />
-{{outlet}}
+<Parent as |data|>
+  <Child @person={{data.person}} />
+</Parent>
