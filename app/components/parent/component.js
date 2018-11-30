@@ -6,10 +6,10 @@ import { set } from '@ember/object';
 export default Component.extend({
   tagName: '',
 
-  init() {
-    this._super(...arguments);
-
-    let person = Store(create(Person), nextState => set(this, 'person', nextState));
+  didReceiveAttrs() {
+    let person = Store(create(Person), nextState => {
+      return set(this, 'person', nextState);
+    });
     set(this, 'person', person);
   },
 });
