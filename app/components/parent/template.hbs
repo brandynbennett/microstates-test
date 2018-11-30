@@ -1,5 +1,7 @@
-<button {{action person.changeIdentity 'Bart' 'Simpson'}}>
-  Change Identity
-</button>
+{{#let (state (type 'infant')) as |person|}}
+  <button {{action person.changeIdentity 'Bart' 'Simpson'}}>
+    Change Identity
+  </button>
 
-{{yield (hash person=person)}}
+  {{yield (hash person=person)}}
+{{/let}}
